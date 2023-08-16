@@ -26,6 +26,10 @@ input:focus {
     outline: 1px solid rgb(58, 45, 205);
 }
 
+input::placeholder {
+    color: #fff;
+}
+
 button {
     cursor: pointer;
     display: inline-block;

@@ -10,11 +10,15 @@ export interface ICreateTodo extends Omit<ITodo, 'id'> {}
 export interface IUser {
   id: string;
   name: string;
-  age: number;
+  age: string;
   state: string;
 }
 
-// "id": "3",
-//             "name": "Bob",
-//             "age": 25,
-//             "state": "other"
+export interface IUserData extends Omit<IUser, 'id'> {}
+
+// export interface ICar {
+//   id: number;
+//   image: string;
+//   name: string;
+//   price: string;
+// }

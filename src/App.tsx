@@ -8,7 +8,7 @@ import Users from './components/users/Users';
 
 const App = () => {
   // ! refetch - позволяет без перезагрузки приложения отправить повторный запрос
-  const { data, isLoading, refetch } = useTodos();
+  const { data, isLoading } = useTodos();
   // ! более удобный способ это использовать контекст нашего query client и достать оттуда метод invalidateQueries
   // ! invalidateQueries - принимает в себя ключ, который мы указывали в useQuery - ['todos']
   // const queryClient = useQueryClient();

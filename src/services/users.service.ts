@@ -1,9 +1,13 @@
 import axios from 'axios';
-import { IUser } from '../app.interfaces';
+import { IUser, IUserData } from '../app.interfaces';
 
 class UserServices {
-  async makeFetch() {
+  async getAll() {
     return await axios.get<IUser[]>('http://localhost:4200/users');
+  }
+
+  async postUser(data: IUserData) {
+    return await axios.post('http://localhost:4200/users', data);
   }
 }
 

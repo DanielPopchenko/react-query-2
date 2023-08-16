@@ -1,0 +1,15 @@
+.form {
+    margin-bottom: 30px;
+}
+
+.form>select {
+    max-width: 200px;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #727171;
+    color: #fff;
+}

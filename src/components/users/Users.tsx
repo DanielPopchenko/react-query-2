@@ -1,27 +1,30 @@
-import React, { useEffect } from 'react';
-import usersService from '../../services/users.service';
+import { Form } from '../form/Form';
 import { useUsers } from '../../hooks/useUsers';
 import styles from './Users.module.css';
 
 const Users = () => {
-  const { data, isLoading } = useUsers();
+  const { data } = useUsers();
 
   console.log(data);
 
-  useEffect(() => {}, []);
-
   return (
-    <div className={styles.users}>
-      {data?.length
-        ? data.map((item) => (
-            <div key={item.id}>
-              <p>
-                {item.name} - <b>{item.age} y.o</b>
-              </p>
-            </div>
-          ))
-        : 'Data is not found !'}
-    </div>
+    <>
+      <div className={styles.users}>
+        <h2 style={{ marginBottom: 30 }}>Users</h2>
+
+        <Form />
+
+        {data?.length
+          ? data.map((user) => (
+              <div key={user.id}>
+                <p>
+                  {user.name} - <b>{user.age} y.o</b> - {user.state}
+                </p>
+              </div>
+            ))
+          : 'Data is not found !'}
+      </div>
+    </>
   );
 };
 
